@@ -1,0 +1,41 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: "Icons";
+    src: url("../fonts/bootstrap-icons.woff2") format("woff2"),
+    url("../fonts/bootstrap-icons.woff") format("woff");
+}
+.close-icon {
+    cursor: pointer;
+    font-size: 24px;
+    &::after {
+        font-family: 'Icons';
+        content: '\F62A';
+    }
+    &:hover {
+        color: $text-muted;
+    }
+}
+.mark-column {
+    width: 70px;
+}
+.created-column {
+    width: 200px;
+}
+.sort {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Icons';
+    .asc::before {
+        content: '\F286';
+    }
+    .desc::before {
+        content: '\F282';
+    }
+    .asc:hover,
+    .desc:hover,
+    .selected::before,
+    .selected::before {
+        color: $primary;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad App</title>
+    <link rel="stylesheet" href="./assets/scss/main.scss">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.png" 
+             alt="Logo" 
+             width="auto" 
+             height="30" 
+             class="d-inline-block align-text-top">
+        Notepad App
+      </a>
+    </div>
+  </nav>
+  <main class="container pt-2">
+    <div class="w-100 d-flex justify-content-end">
+      <button type="button float-end" 
+              class="btn btn-primary"
+              id="addNote"
+              >Add Note</button>
+    </div>
+    <div id="notesContainer">
+      <table class="table table-hover">
+        <thead>
+          <tr>            
+            <th class="text-center"> 
+              <div class="sort d-inline-block">
+                <span class="sort-icon asc" 
+                      data-sort-criteria="marked"></span>
+                <span class="sort-icon desc"
+                      data-sort-criteria="marked"></span>
+              </div>
+            </th>
+            <th>Title</th>
+            <th>Content</th>
+            <th class="created-column">
+              Created 
+              <div class="sort d-inline-block float-end">
+                <span class="sort-icon asc"
+                      data-sort-criteria="date"></span>
+                <span class="sort-icon desc"
+                      data-sort-criteria="date"></span>
+              </div>
+            </th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Generated Content -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="mt-auto mb-0 bg-dark text-light vh-25 text-center">
+    © <span class="current-year"></span>
+  </footer>
+  <div class="bg-overlay bg-dark bg-opacity-50 fixed-top vh-100 vw-100 justify-content-center align-items-center d-none"></div>
+  <div class="bg-alert-overlay bg-none fixed-top vh-100 vw-100 justify-content-center align-items-center d-none"></div>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
